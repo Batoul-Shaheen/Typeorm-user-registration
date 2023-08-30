@@ -4,7 +4,7 @@ import Users from "../@types/UserType.js";
 
 const router = express.Router();
 
-router.get('/users', async (req: Users.Request, res) => {
+router.get('/', async (req: Users.Request, res) => {
     try {
         const users = await User.find();
         res.status(200).send(users);
